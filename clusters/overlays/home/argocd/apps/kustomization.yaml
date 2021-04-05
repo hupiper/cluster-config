@@ -4,9 +4,6 @@ kind: Kustomization
 bases:
 - ../../../../../environments/overlays/local
 
-resources:
-- ../../../../../manifests/argocd/apps/cost-management-operator/base
-
 patches:
 # Patch console links for cluster routes
 - target:
