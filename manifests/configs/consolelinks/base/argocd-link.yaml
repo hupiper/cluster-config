@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: argocd
+spec:
+  href: 'https://argocd-server-argocd.apps.ocp4.pokitoach.com'
+  location: ApplicationMenu
+  text: ArgoCD
+  applicationMenu:
+    section: Tools
+    imageURL: https://raw.githubusercontent.com/hupiper/cluster-config/master/docs/img/argocd-logo.png
