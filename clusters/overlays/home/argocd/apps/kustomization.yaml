@@ -22,10 +22,3 @@ patches:
     kind: Application
     name: config-compliance-security
   path: patch-compliance-operator-app.yaml
-# Path cost management to use Home source
-- target:
-    group: argoproj.io
-    version: v1alpha1
-    kind: Application
-    name: config-cost-management
-  path: patch-cost-management-operator-app.yaml
