@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  PASS: cGFzczEyMw==
+  USER: YWRtaW4=
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: alertmanager
