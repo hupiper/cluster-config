@@ -7,4 +7,3 @@ bases:
 resources:
 - sealed-secrets-namespace.yaml
 - sealed-secrets-secret.yaml
-
