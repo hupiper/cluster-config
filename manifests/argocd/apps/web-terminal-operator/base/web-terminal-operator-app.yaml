@@ -19,7 +19,7 @@ spec:
   source:
     path: web-terminal-operator/overlays/aggregate
     repoURL: https://github.com/redhat-canada-gitops/catalog.git
-    targetRevision: main
+    targetRevision: master
   syncPolicy:
     automated:
       prune: false
