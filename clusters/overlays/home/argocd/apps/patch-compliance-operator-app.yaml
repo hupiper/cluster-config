@@ -4,6 +4,4 @@
 - op: replace
   path: /spec/source/repoURL
   value: https://github.com/hupiper/cluster-config.git
-- op: replace
-  path: /spec/source/targetRevision
-  value: main
+

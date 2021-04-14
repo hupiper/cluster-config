@@ -15,7 +15,7 @@ spec:
   source:
     path: manifests/configs/oauth/overlays/default
     repoURL: https://github.com/hupiper/cluster-config.git
-    targetRevision: main
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true

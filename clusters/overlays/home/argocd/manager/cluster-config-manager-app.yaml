@@ -12,7 +12,7 @@ spec:
   source:
     path: clusters/overlays/home/argocd/apps
     repoURL: https://github.com/hupiper/cluster-config.git
-    targetRevision: main
+    targetRevision: master
   syncPolicy:
     automated:
       prune: false
