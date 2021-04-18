@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- reg-pvc.yaml
+
+patchesJson6902:
+  - path: patch-reg-replicas.yaml
+    target:
+      group: imageregistry.operator.openshift.io
+      kind: Config
+      name: cluster
+      version: v1
