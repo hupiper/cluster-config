@@ -5,7 +5,7 @@ namespace: argocd
 
 bases:
 - ../../../manifests/argocd/apps/sealed-secrets-operator/base
-#- ../../../manifests/argocd/apps/storage/base
+- ../../../manifests/argocd/apps/storage/base
 - ../../../manifests/argocd/apps/console-links/base
 - ../../../manifests/argocd/apps/oauth/base
 - ../../../manifests/argocd/apps/container-security-operator/base
