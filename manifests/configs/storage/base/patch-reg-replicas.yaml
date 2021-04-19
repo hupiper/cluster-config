@@ -1,9 +1,60 @@
-- op: replace
-  path: /spec/rolloutStrategy
-  value: Recreate
-- op: replace
-  path: /spec/replicas
-  value: 1
-- op: replace
-  path: /spec/managementState
-  value: Managed
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: patch-job
+    annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: patch-registry-config
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - cluster
+    verbs:
+      - get
+      - list
+      - patch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: patch-job
+  # annotations:
+  #   argocd.argoproj.io/hook: PreSync
+  #   argocd.argoproj.io/hook-delete-policy: HookSucceeded
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: patch-registry-config
+subjects:
+  - kind: ServiceAccount
+    name: patch-job
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: patch-reg-replicas
+  # annotations:
+  #   argocd.argoproj.io/hook: PreSync
+  #   argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: patch-reg-spec
+        image: registry.redhat.io/openshift4/ose-cli:v4.7
+        command:
+            - /bin/bash
+            - -c
+            - |
+
+              oc patch config.imageregistry.operator.openshift.io/cluster --type=merge -p '{"spec":{"rolloutStrategy":"Recreate","replicas":1}}'
+              oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"managementState":"Managed"}}'
+      restartPolicy: Never
+      serviceAccountName: patch-job
+  backoffLimit: 0
