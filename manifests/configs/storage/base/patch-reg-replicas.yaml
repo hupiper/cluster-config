@@ -19,5 +19,5 @@ spec:
               oc patch config.imageregistry.operator.openshift.io/cluster --type=merge -p '{"spec":{"rolloutStrategy":"Recreate","replicas":1}}'
               oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"managementState":"Managed"}}'
       restartPolicy: Never
-      #serviceAccountName: patch-job
+      serviceAccountName: cluster-image-registry-operator
   backoffLimit: 0
