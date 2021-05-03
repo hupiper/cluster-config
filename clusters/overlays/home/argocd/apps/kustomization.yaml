@@ -13,10 +13,10 @@ patches:
     name: config-console-links
   path: patch-console-link-app.yaml
 
-# Patch so compliance scan only runs on masters and doesn't get double-run
-#- target:
-#    group: argoproj.io
-#    version: v1alpha1
-#    kind: Application
-#    name: config-compliance-security
-#  path: patch-compliance-operator-app.yaml
+ Patch so compliance scan only runs on masters and doesn't get double-run
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: config-compliance-security
+  path: patch-compliance-operator-app.yaml
