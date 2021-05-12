@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: patch-job
+  name: storage-sa-patch-job
   namespace: openshift-image-registry
   annotations:
     argocd.argoproj.io/hook: PostSync
@@ -10,7 +10,7 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: patch-job
+  name: storage-crb-patch-job
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
@@ -20,7 +20,7 @@ roleRef:
   name: cluster-admin
 subjects:
   - kind: ServiceAccount
-    name: patch-job
+    name: storage-sa-patch-job
     namespace: openshift-image-registry
 ---
 apiVersion: batch/v1
@@ -45,5 +45,5 @@ spec:
               oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"managementState":"Managed"}}'
               oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"storage":{"pvc":{"claim:":"image-registry-storage"}}}}'
       restartPolicy: Never
-      serviceAccountName: patch-job
+      serviceAccountName: storage-sa-patch-job
   backoffLimit: 0
