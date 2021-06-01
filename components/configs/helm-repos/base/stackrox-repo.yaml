@@ -1,0 +1,8 @@
+apiVersion: helm.openshift.io/v1beta1
+kind: HelmChartRepository
+metadata:
+  name: rhacs
+spec:
+  connectionConfig:
+    url: 'https://mirror.openshift.com/pub/rhacs/charts/'
+  name: rhacs

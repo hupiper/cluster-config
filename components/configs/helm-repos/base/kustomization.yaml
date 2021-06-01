@@ -1,6 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
 resources:
-- gitops-operator-cr.yaml
-- gitops-workaround-993-role.yaml
+- stackrox-repo.yaml

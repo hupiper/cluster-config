@@ -11,5 +11,5 @@ resources:
 - config-console-links-app.yaml
 - config-container-security-app.yaml
 - config-namespace-config-operator-app.yaml
-- config-web-terminal-operator-app.yaml
+# - config-web-terminal-operator-app.yaml
 # - tenant-product-catalog-app.yaml
