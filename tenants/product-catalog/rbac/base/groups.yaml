@@ -1,0 +1,7 @@
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: product-catalog-admins
+users:
+- admin
+- mdunnett@redhat.com

@@ -14,4 +14,22 @@ bases:
 resources:
 - namespace.yaml
 - operatorgroup.yaml
+- admin-rolebinding.yaml
 - product-catalog-project.yaml
+- console-link.yaml
+
+patches:
+-  target:
+     kind: ArgoCD
+   patch: |-
+    - op: replace
+      path: /spec/applicationInstanceLabelKey
+      value: argocd.argoproj.io/product-catalog-instance
+    - op: add
+      path: /spec/rbac
+      value:
+        defaultPolicy: role:readonly
+        policy: |
+          g, product-catalog-admins, role:admin
+          g, system:cluster-admins, role:admin
+        scopes: "[groups]"

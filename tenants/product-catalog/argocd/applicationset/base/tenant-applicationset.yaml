@@ -19,7 +19,17 @@ spec:
           url: https://kubernetes.default.svc
           values:
             name: product-catalog-gitops
-            path: tenants/product-catalog/gitops-operator/overlays/default
+            path: tenants/product-catalog/gitops-operator/overlays/rolebinding
+        - cluster: local
+          url: https://kubernetes.default.svc
+          values:
+            name: product-catalog-rbac
+            path: tenants/product-catalog/rbac/base
+        - cluster: local
+          url: https://kubernetes.default.svc
+          values:
+            name: product-catalog-monitor
+            path: tenants/product-catalog/monitor/overlays/default
   template:
     metadata:
       name: '{{values.name}}'
@@ -27,13 +37,19 @@ spec:
         argocd.argoproj.io/compare-options: IgnoreExtraneous
         argocd.argoproj.io/sync-options: Prune=false
     spec:
-      project: tenant-product-catalog
+      project: tenants
       syncPolicy:
         automated:
           prune: false
           selfHeal: true
+        retry:
+          limit: 2
+          backoff:
+            duration: 5s
+            factor: 2
+            maxDuration: 3m
       source:
-        repoURL: https://github.com/gnunn-gitops/cluster-config
+        repoURL: https://github.com/hupiper/cluster-config
         targetRevision: master
         path: '{{values.path}}'
       destination:
