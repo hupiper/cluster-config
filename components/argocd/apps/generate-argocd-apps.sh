@@ -10,7 +10,7 @@ authentication=(config-authentication "https://github.com/hupiper/cluster-config
 # Groups and Membership
 groups=(config-groups-and-membership "https://github.com/hupiper/cluster-config.git" master components/configs/groups-and-membership/overlays/default "11")
 # Alert Manager
-#alertmanager=(config-alertmanager "https://github.com/hupiper/cluster-config.git" master #components/configs/alertmanager/base "11" )
+alertmanager=(config-alertmanager "https://github.com/hupiper/cluster-config.git" master #components/configs/alertmanager/base "11" )
 # Console Links
 consolelinks=(config-console-links "https://github.com/hupiper/cluster-config.git" master components/configs/consolelinks/base "11")
 # Helm Repos
