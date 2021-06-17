@@ -10,7 +10,7 @@ resources:
 - ../../../../../../../components/argocd/apps/config-storage/base
 - ../../../../../../../components/argocd/apps/config-authentication/base
 - ../../../../../../../components/argocd/apps/config-groups-and-membership/base
-#- ../../../../../../../components/argocd/apps/config-alertmanager/base
+- ../../../../../../../components/argocd/apps/config-alertmanager/base
 - ../../../../../../../components/argocd/apps/config-console-links/base
 #- ../../../../../../../components/argocd/apps/config-helm-repos/base
 #- ../../../../../../../components/argocd/apps/config-prometheus-user-app/base
