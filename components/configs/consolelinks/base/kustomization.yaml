@@ -6,3 +6,4 @@ resources:
 #- argocd-link.yaml
 #- argocd-help-link.yaml
 - quay-link.yaml
+- github-link.yaml

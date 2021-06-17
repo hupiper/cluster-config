@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: clusterconfig
+spec:
+  href: 'https://github.com/hupiper/cluster-config'
+  location: ApplicationMenu
+  text: Cluster Config
+  applicationMenu:
+    section: Tools
+    imageURL: https://raw.githubusercontent.com/hupiper/cluster-config/master/docs/img/GitHub-Mark-32px.png

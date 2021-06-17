@@ -14,7 +14,7 @@ spec:
   project: cluster-config
   source:
     path: components/configs/alertmanager/base
-    repoURL: https://github.com/gnunn-gitops/cluster-config.git
+    repoURL: https://github.com/hupiper/cluster-config.git
     targetRevision: master
   syncPolicy:
     automated:
