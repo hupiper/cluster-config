@@ -5,7 +5,7 @@ metadata:
 spec:
   href: 'https://github.com/gnunn-gitops/cluster-config'
   location: ApplicationMenu
-  text: Cluster Config
+  text: GNunn Cluster Config
   applicationMenu:
     section: Tools
     imageURL: https://raw.githubusercontent.com/hupiper/cluster-config/master/docs/img/GitHub-Mark-32px.png
