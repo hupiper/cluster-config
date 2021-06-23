@@ -7,3 +7,4 @@ resources:
 #- argocd-help-link.yaml
 - quay-link.yaml
 - github-link.yaml
+- gnunn-git.yaml
