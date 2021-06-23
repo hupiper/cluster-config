@@ -1,7 +1,7 @@
 apiVersion: console.openshift.io/v1
 kind: ConsoleLink
 metadata:
-  name: clusterconfig
+  name: gnunnclusterconfig
 spec:
   href: 'https://github.com/gnunn-gitops/cluster-config'
   location: ApplicationMenu
