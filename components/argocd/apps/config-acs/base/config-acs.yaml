@@ -13,9 +13,9 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: acs-operator/overlays/aggregate
-    repoURL: https://github.com/redhat-canada-gitops/catalog.git
-    targetRevision: 3.62.0
+    path: components/apps/acs-operator/overlays/sso
+    repoURL: https://github.com/hupiper/cluster-config.git
+    targetRevision: acs
   syncPolicy:
     automated:
       selfHeal: true

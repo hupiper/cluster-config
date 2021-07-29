@@ -28,18 +28,20 @@ ns=(config-namespace-config-operator "https://github.com/hupiper/cluster-config.
 # Web Terminal
 web_terminal=(config-web-terminal-operator "https://github.com/redhat-canada-gitops/catalog.git" master web-terminal-operator/overlays/aggregate "21")
 # Product Catalog Tenant (ApplicationSet)
-#tenant_product_catalog=(tenant-product-catalog "https://github.com/hupiper/cluster-config.git" master tenants/product-catalog/argocd/applicationset/base "51")
+tenant_product_catalog=(tenant-product-catalog "https://github.com/hupiper/cluster-config.git" master tenants/product-catalog/argocd/applicationset/base "51")
 
 apps=(
   sealed_secrets[@]  
   storage[@]
   authentication[@]
   groups[@]
+  alertmanager[@]
   consolelinks[@]
-   prometheus_user_app[@]
+  prometheus_user_app[@]
   cso[@]
   ns[@]
   web_terminal[@]
+  tenant_product_catalog[@]
 )
 
 namespace=openshift-gitops
