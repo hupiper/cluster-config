@@ -1,5 +1,6 @@
-I cloned this from Gerald Nunn's repository - I suggest you check it out. Great stuff! https://github.com/hupiper/cluster-config
+I cloned this from Gerald Nunn's repository - I suggest you check it out. Great stuff! I try to keep up with the changes he and the RH Canada team make to their repos: https://github.com/gnunn-gitops/cluster-config and https://github.com/redhat-canada-gitops/catalog
 
+From Gerald's Repo:
 # GitOps Cluster Configuration
 
 This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/gnunn-gitops/standards) repository but there has been some tweaks that need to be reflected back in that document.
