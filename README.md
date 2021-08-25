@@ -1,9 +1,9 @@
-I cloned this from Gerald Nunn's repository - I suggest you check it out. Great stuff! I try to keep up with the changes he and the RH Canada team make to their repos: https://github.com/gnunn-gitops/cluster-config and https://github.com/redhat-canada-gitops/catalog
+I cloned this from Gerald Nunn's repository - I suggest you check it out. Great stuff! I try to keep up with the changes he and the RH Canada team make to their repos: https://github.com/hupiper/cluster-config and https://github.com/redhat-canada-gitops/catalog
 
 From Gerald's Repo:
 # GitOps Cluster Configuration
 
-This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/gnunn-gitops/standards) repository but there has been some tweaks that need to be reflected back in that document.
+This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/hupiper/standards) repository but there has been some tweaks that need to be reflected back in that document.
 
 # Structure
 
@@ -13,7 +13,7 @@ Similar to standards document, the repo consists of three high level folders:
 - _components_ - a base set of kustomize manifests and yaml for applications, operators, configuration and ArgoCD app/project definitions. Everything is inherited from here
 - _clusters_ - Cluster specific configuration, this inherits and kustomizes from the components folder and uses an identical structure.
 
-![alt text](https://raw.githubusercontent.com/gnunn-gitops/cluster-config/master/docs/img/argocd.png)
+![alt text](https://raw.githubusercontent.com/hupiper/cluster-config/master/docs/img/argocd.png)
 
 # Usage
 

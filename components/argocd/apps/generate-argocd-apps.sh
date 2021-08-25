@@ -3,14 +3,14 @@
 sealed_secrets=(sealed-secrets "https://github.com/hupiper/cluster-config.git" master components/apps/sealed-secrets-operator/overlays/default "1")
 # Lets Encrypt
 #lets_encrypt=(letsencrypt-certs "https://github.com/hupiper/cluster-config.git" master components/apps/letsencrypt-certs/overlays/default "2")
-# Storage
+# ISCSI Storage
 storage=(config-storage "https://github.com/hupiper/cluster-config.git" master components/configs/storage/base "3")
 # Authentication
-authentication=(config-authentication "https://github.com/hupiper/cluster-config.git" master components/configs/oauth/overlays/default "4")
+authentication=(config-authentication "https://github.com/hupiper/cluster-config.git" master components/configs/oauth/overlays/google-with-matrix "4")
 # Groups and Membership
 groups=(config-groups-and-membership "https://github.com/hupiper/cluster-config.git" master components/configs/groups-and-membership/overlays/default "11")
 # Alert Manager
-alertmanager=(config-alertmanager "https://github.com/hupiper/cluster-config.git" master #components/configs/alertmanager/base "11" )
+alertmanager=(config-alertmanager "https://github.com/hupiper/cluster-config.git" master components/configs/alertmanager/base "11" )
 # Console Links
 consolelinks=(config-console-links "https://github.com/hupiper/cluster-config.git" master components/configs/consolelinks/base "11")
 # Helm Repos
@@ -18,20 +18,22 @@ consolelinks=(config-console-links "https://github.com/hupiper/cluster-config.gi
 # Prometheus User Monitoring
 prometheus_user_app=(config-prometheus-user-app "https://github.com/hupiper/cluster-config.git" master components/configs/prometheus-user-app/base "11")
 # Container Security Operator
-cso=(config-container-security "https://github.com/redhat-canada-gitops/catalog.git" master container-security-operator/base "21" )
+cso=(config-container-security "https://github.com/redhat-cop/gitops-catalog.git" master container-security-operator/base "21" )
 # Cost Management
-#cost=(config-cost-management "https://github.com/hupiper/cluster-config.git" master clusters/home/apps/cost-management-operator/overlays/default "21")
+cost=(config-cost-management "https://github.com/hupiper/cluster-config.git" master clusters/home/apps/cost-management-operator/overlays/default "21")
 # Namespace Config Operator
 ns=(config-namespace-config-operator "https://github.com/hupiper/cluster-config.git" master components/apps/namespace-configuration-operator/overlays/default "21")
 # RH-SSO Instances
 #sso=(config-sso "https://github.com/hupiper/cluster-config.git"  master clusters/home/apps/sso/overlays/default "21")
 # Web Terminal
-web_terminal=(config-web-terminal-operator "https://github.com/redhat-canada-gitops/catalog.git" master web-terminal-operator/overlays/aggregate "21")
+web_terminal=(config-web-terminal-operator "https://github.com/redhat-cop/gitops-catalog.git" master web-terminal-operator/overlays/aggregate "21")
+# Tekton Cluster Tasks
+tekton_cluster_tasks=(tekton-cluster-tasks "https://github.com/hupiper/cluster-config.git" master components/apps/tekton-cluster-tasks/base "41")
 # Product Catalog Tenant (ApplicationSet)
 tenant_product_catalog=(tenant-product-catalog "https://github.com/hupiper/cluster-config.git" master tenants/product-catalog/argocd/applicationset/base "51")
 
 apps=(
-  sealed_secrets[@]  
+  sealed_secrets[@]
   storage[@]
   authentication[@]
   groups[@]
@@ -39,6 +41,7 @@ apps=(
   consolelinks[@]
   prometheus_user_app[@]
   cso[@]
+  cost[@]
   ns[@]
   web_terminal[@]
   tenant_product_catalog[@]
