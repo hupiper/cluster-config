@@ -24,7 +24,7 @@ resources:
 - ../../../../../../../components/argocd/apps/config-cost-management/base
 - ../../../../../../../components/argocd/apps/tenant-product-catalog/base
 
-#patches:
+patches:
 #- patch: |-
 #    - op: replace
 #      path: /spec/source/path
