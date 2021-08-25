@@ -25,13 +25,6 @@ resources:
 - ../../../../../../../components/argocd/apps/tenant-product-catalog/base
 
 patches:
-#- patch: |-
-#    - op: replace
-#      path: /spec/source/path
-#      value: clusters/local.home/apps/sso/overlays/default
-#  target:
-#    kind: Application
-#    name: config-sso
 - patch: |-
     - op: replace
       path: /spec/source/path
@@ -39,3 +32,10 @@ patches:
   target:
     kind: Application
     name: config-cost-management
+#- patch: |-
+#    - op: replace
+#      path: /spec/source/path
+#      value: clusters/local.home/apps/sso/overlays/default
+#  target:
+#    kind: Application
+#    name: config-sso
