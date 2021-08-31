@@ -3,7 +3,7 @@ kind: ConsoleLink
 metadata:
   name: gnunnclusterconfig
 spec:
-  href: 'https://github.com/hupiper/cluster-config'
+  href: 'https://github.com/gnunn-gitops/cluster-config'
   location: ApplicationMenu
   text: GNunn Cluster Config
   applicationMenu:
