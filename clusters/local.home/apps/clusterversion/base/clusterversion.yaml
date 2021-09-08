@@ -4,8 +4,8 @@ metadata:
   name: version
 spec:
   channel: fast-4.8
-  clusterID: d41fc088-8bbb-45a8-a837-825669f3fafe
+  clusterID: 1dcd6275-82b9-4a5d-b16c-e7a866430290
   desiredUpdate:
-    image: quay.io/openshift-release-dev/ocp-release@sha256:7047acb946649cc1f54d98a1c28dd7b487fe91479aa52c13c971ea014a66c8a8
-    version: 4.8.5
+    image: quay.io/openshift-release-dev/ocp-release@sha256:5fb4b4225498912357294785b96cde6b185eaed20bbf7a4d008c462134a4edfd
+    version: 4.8.9
   upstream: https://api.openshift.com/api/upgrades_info/v1/graph
