@@ -4,16 +4,25 @@ kind: Kustomization
 namespace: sealed-secrets
 
 bases:
-- github.com/redhat-cop/gitops-catalog/sealed-secrets-operator/base
+  - github.com/redhat-cop/gitops-catalog/sealed-secrets-operator/base
 
 resources:
-- role-anyuid.yaml
+  - role-anyuid.yaml
 
 patchesJson6902:
-- target:
-    version: v1
-    group: apps
-    kind: Deployment
-    name: sealed-secrets-controller
-    namespace: sealed-secrets
-  path: patch-update-status.yaml
+  - target:
+      version: v1
+      group: apps
+      kind: Deployment
+      name: sealed-secrets-controller
+      namespace: sealed-secrets
+    path: patch-update-status.yaml
+
+patches:
+  - patch: |-
+      - op: replace
+        path: "/apiVersion"
+        value: rbac.authorization.k8s.io/v1
+    target:
+      group: rbac.authorization.k8s.io
+      version: v1beta1

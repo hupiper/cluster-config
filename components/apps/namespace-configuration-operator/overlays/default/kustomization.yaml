@@ -7,12 +7,19 @@ commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 resources:
-- namespace.yaml
-- operator-group.yaml
-- github.com/redhat-cop/gitops-catalog/namespace-configuration-operator/base
-- github.com/redhat-cop/gitops-catalog/installplan-approver/base
-- small-ns-config.yaml
-- medium-ns-config.yaml
-- large-ns-config.yaml
-- multitenant.yaml
-- patch-default-ns-multitenant.yaml
+    - namespace.yaml
+    - operator-group.yaml
+    - github.com/redhat-cop/gitops-catalog/namespace-configuration-operator/base
+    - github.com/redhat-cop/gitops-catalog/installplan-approver/base
+    - small-ns-config.yaml
+    - medium-ns-config.yaml
+    - large-ns-config.yaml
+    - multitenant.yaml
+#    - patch-default-ns-multitenant.yaml
+
+patches:
+    - target:
+          kind: OperatorGroup
+      patch: |-
+          - op: remove
+            path: /spec/targetNamespaces/0
