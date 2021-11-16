@@ -4,7 +4,7 @@ metadata:
   name: version
 spec:
   channel: stable-4.9
-  clusterID: 4cbbee07-6fa9-4ff1-8259-2fe1e170cb66
+  clusterID: 4078dc50-1725-466c-9036-8e17960be051
   desiredUpdate:
     image: quay.io/openshift-release-dev/ocp-release@sha256:386f4e08c48d01e0c73d294a88bb64fac3284d1d16a5b8938deb3b8699825a88
     version: 4.9.5
