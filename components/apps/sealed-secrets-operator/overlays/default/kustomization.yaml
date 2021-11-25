@@ -18,11 +18,11 @@ patchesJson6902:
       namespace: sealed-secrets
     path: patch-update-status.yaml
 
-patches:
-  - patch: |-
-      - op: replace
-        path: "/apiVersion"
-        value: rbac.authorization.k8s.io/v1
-    target:
-      group: rbac.authorization.k8s.io
-      version: v1beta1
+#patches:
+#  - patch: |-
+#      - op: replace
+#        path: "/apiVersion"
+#        value: rbac.authorization.k8s.io/v1
+#    target:
+#      group: rbac.authorization.k8s.io
+#      version: v1beta1
