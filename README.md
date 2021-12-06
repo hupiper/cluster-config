@@ -13,7 +13,7 @@ Similar to standards document, the repo consists of three high level folders:
 - _components_ - a base set of kustomize manifests and yaml for applications, operators, configuration and ArgoCD app/project definitions. Everything is inherited from here
 - _clusters_ - Cluster specific configuration, this inherits and kustomizes from the components folder and uses an identical structure.
 
-![alt text](https://raw.githubusercontent.com/hupiper/cluster-config/master/docs/img/argocd.png)
+![alt text](https://raw.githubusercontent.com/hupiper/cluster-config/main/docs/img/argocd.png)
 
 # Usage
 

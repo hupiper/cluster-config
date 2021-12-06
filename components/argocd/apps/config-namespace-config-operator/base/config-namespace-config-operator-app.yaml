@@ -17,7 +17,7 @@ spec:
   source:
     path: components/apps/namespace-configuration-operator/overlays/default
     repoURL: https://github.com/hupiper/cluster-config.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       selfHeal: true

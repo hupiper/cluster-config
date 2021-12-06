@@ -5,4 +5,4 @@ metadata:
   name: moderate
   namespace: openshift-compliance
 roles:
-- master
+- main

@@ -15,7 +15,7 @@ spec:
   source:
     path: clusters/local.home/apps/clusterversion/base
     repoURL: https://github.com/hupiper/cluster-config.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       selfHeal: true

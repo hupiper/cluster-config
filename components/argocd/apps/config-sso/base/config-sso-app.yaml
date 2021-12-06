@@ -15,7 +15,7 @@ spec:
   source:
     path: clusters/home/apps/sso/overlays/default
     repoURL: https://github.com/hupiper/cluster-config.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       selfHeal: true

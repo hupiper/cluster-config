@@ -8,4 +8,4 @@ spec:
   text: GNunn Cluster Config
   applicationMenu:
     section: Tools
-    imageURL: https://raw.githubusercontent.com/hupiper/cluster-config/master/docs/img/GitHub-Mark-32px.png
+    imageURL: https://raw.githubusercontent.com/hupiper/cluster-config/main/docs/img/GitHub-Mark-32px.png
