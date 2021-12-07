@@ -1,6 +1,6 @@
 - op: add
   path: /users/-
-  value: "user1"
+  value: "admin"
 - op: add
   path: /users/-
   value: "user2"
